@@ -1,0 +1,9 @@
+
+INSTRUCTIONS:
+Download all files
+Change Vagrantfile to your fedora15 basebox (I will upload mine later on)
+Vagrant up
+Graphite is running locally on port 8080 and on port 50051 when you connect from outside (portfw)
+An example client will start polling and feeding carbon with the load average of the system at boot
+
+Note: Vagrantfile tested with a fedora15 box build from a veewee/vagrant template

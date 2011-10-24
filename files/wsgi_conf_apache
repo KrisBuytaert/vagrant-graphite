@@ -1,0 +1,2 @@
+LoadModule wsgi_module modules/mod_wsgi.so
+WSGISocketPrefix /var/run/wsgi
