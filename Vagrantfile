@@ -20,7 +20,6 @@ Vagrant::Config.run do |config|
   config.vm.forward_port "http", 80, 50050
   config.vm.forward_port "http2", 8080, 50051
   config.vm.forward_port "carbon", 2003, 2021
-  config.vm.forward_port "statsd", 8125, 8163, { :protocol => 'udp' }
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
