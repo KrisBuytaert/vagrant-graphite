@@ -1,3 +1,6 @@
+
+
+
 $build_dir = "/vagrant/files/"
 $version = "-0.9.9"
 
@@ -19,30 +22,27 @@ $version = "-0.9.9"
 				gpgcheck => 0,
 				enabled => 1;
 
+
+		'inuits':
+			baseurl => $operatingsystemrelease ? {
+				'6.0' => 'http://repo.inuits.be/centos/6/os',
+					'*' => 'http://repo.inuits.be/centos/5/os',
+			},
+				descr => $operatingsystemrelease ? {
+					'6.0' => 'inuits CentOS 6.x repo',
+					'*' => 'inuits CentOS 5.x repo',
+				},
+				gpgcheck => 0,
+				enabled => 1;
+
+
 	}
 
-class django-tagging {
 
-        $class = "django-tagging"
-        $version = "-0.3.1"
-        $dir = "$class$version"
 
-        #extract
 
-        exec { "extract$dir":
-        	command => "tar -xvzf $dir.tar.gz",
-	        cwd => "$build_dir",
-        	creates => "$build_dir/$dir", #If this file exist, this exec will not get executed anymore
-        }
-
-        #install
-        exec { "install$dir":
-	        command => "python setup.py install",
-        	cwd => "$build_dir/$dir",
-	        require => Exec["extract$dir"],
-	        creates => "/usr/lib/python2.7/site-packages/tagging/managers.py",
-        }
-
+package {"django-tagging": 
+	ensure => present;
 }
 
 
@@ -55,7 +55,7 @@ class django-tagging {
 class client_demo{
 	exec { "startClientExample":
 		command => "bash -c 'python /vagrant/files/graphite-web-0.9.9/examples/example-client.py >> /var/log/exampleclient.log' disown &",
-		require => [ Class["graphite::web"], Class["graphite::carbon"], Class["django-tagging"], Class["graphite::whisper"]],
+		require => [ Class["graphite::web"], Class["graphite::carbon"],  Class["graphite::whisper"]],
 		creates => "/var/log/exampleclient.log"
 	}
 }
@@ -71,7 +71,6 @@ $soft = [ "httpd", "mod_wsgi", "python-fedora-django", "mod_python", "python-zop
 package { $soft: }
 
 
-include django-tagging
 include graphite::web
 include client_demo
 
@@ -91,4 +90,5 @@ file { '/etc/localtime':
        	ensure => "/usr/share/zoneinfo/Europe/Brussels",
 	before => Class["graphite::whisper"]
 }
+
 

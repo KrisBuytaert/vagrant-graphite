@@ -134,7 +134,7 @@ class graphite::whisper {
         	command => "python manage.py syncdb --noinput",
         	cwd => "/opt/graphite/webapp/graphite",
         	creates => "/opt/graphite/storage/graphite.db",
-        	require => [ File['/opt/graphite/webapp/graphite/manage.py'], Package["python-fedora-django"],Exec["installdjango-tagging-0.3.1"] ]
+        	require => [ File['/opt/graphite/webapp/graphite/manage.py'], Package["python-fedora-django"] ]
         }
         file { "/opt/graphite/storage/graphite.db" :
                	owner => "apache",
