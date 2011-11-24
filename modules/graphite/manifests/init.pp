@@ -13,14 +13,16 @@
 # [Remember: No empty lines between comments and class definition]
 class graphite {
 
+	include graphite::carbon
+	include graphite::whisper
+	include graphite::web
 
 }
 
 
 class graphite::web {
 
-        include graphite::carbon
-        include graphite::whisper
+  	# REPLACE with package  
 	     
 
         $class = "graphite-web"
@@ -70,6 +72,7 @@ class graphite::web {
                 group => 'root',
 		require => Package["httpd"] #for the user apache
         }
+
 	file { "/opt/graphite/storage":
     		ensure => "directory",
     		owner => "apache",
@@ -107,6 +110,20 @@ class graphite::web {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class graphite::whisper {

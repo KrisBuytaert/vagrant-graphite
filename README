@@ -2,9 +2,16 @@
 WIP 
 
 Initial work to get it going on Centos.
-
-Refactor to use modules
+Refactored  to use modules
 
 And use packages rather than untarring the files.
 
-Current state is possibly broken 
+Packages can be build using SPECS from 
+https://github.com/dcarley/graphite-rpms/
+
+Which I have build and placed on repo.inuits.eu 
+
+
+
+Current state is possibly broken  as I`m in the mid of changing from the tars that live in /opt to the rpms that live in 
+correct FHS locations 

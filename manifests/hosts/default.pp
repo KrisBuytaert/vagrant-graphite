@@ -51,8 +51,9 @@ package {"django-tagging":
 
 
 
-
+# needs to move to graphite demo example and run example-client.py from the package   
 class client_demo{
+
 	exec { "startClientExample":
 		command => "bash -c 'python /vagrant/files/graphite-web-0.9.9/examples/example-client.py >> /var/log/exampleclient.log' disown &",
 		require => [ Class["graphite::web"], Class["graphite::carbon"],  Class["graphite::whisper"]],
@@ -71,7 +72,7 @@ $soft = [ "httpd", "mod_wsgi", "python-fedora-django", "mod_python", "python-zop
 package { $soft: }
 
 
-include graphite::web
+include graphite
 include client_demo
 
 
