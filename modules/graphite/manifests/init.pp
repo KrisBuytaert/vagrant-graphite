@@ -24,7 +24,7 @@ class graphite::web {
 
 	     
 	package {
-		"bitmap-fonts":	
+		"bitmap-fonts-compat":	
 			ensure => present;
 		"graphite-web":
 			ensure => present;
