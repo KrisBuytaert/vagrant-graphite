@@ -23,8 +23,11 @@ class graphite {
 class graphite::web {
 
 	     
-	package {"graphite-web":
-		ensure => present;
+	package {
+		"bitmap-fonts":	
+			ensure => present;
+		"graphite-web":
+			ensure => present;
 	}
 
 
