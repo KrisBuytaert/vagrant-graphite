@@ -1,4 +1,9 @@
 
+
+Added a cron job that outputs http logs changes (based on logster) to graphite
+
+
+
 Works on CentOS now 
 Refactored  to use modules
 And use packages rather than untarring the files.
