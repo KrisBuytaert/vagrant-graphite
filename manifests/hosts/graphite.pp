@@ -69,5 +69,15 @@ service { 'iptables':
         hasstatus => "true" 
 }
 
+
+include logster
+
+logster::graphite {"swa":
+		host => '127.0.0.1',
+		file => '/var/log/graphite-web/access.log',
+		prefix => 'swa'
+
+	}
+
 } 
 
