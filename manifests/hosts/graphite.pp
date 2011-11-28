@@ -69,5 +69,10 @@ service { 'iptables':
         hasstatus => "true" 
 }
 
+
+
+file {"/etc/httpd/conf.d/welcome.conf":
+	ensure => absent;
+}
 } 
 
