@@ -79,5 +79,9 @@ logster::graphite {"swa":
 
 	}
 
+file {"/etc/httpd/conf.d/welcome.conf":
+        ensure => absent;
+}
+
 } 
 
