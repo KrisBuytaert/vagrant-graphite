@@ -61,15 +61,12 @@ include graphite::demo
 
 	Class ["default-repo"] -> Class ["graphite"] -> Class["graphite::demo"]
 
-#Do not use a notify or a subscribe to trigger this service, by default the service always will be restarted
-#In this case we want the service to be stopped, so we need to use a require or before metaparameter
-#Stop iptables
 
 service { 'iptables':
 	name      => "iptables",
         ensure    => "stopped",
         enable    => false,
-        hasstatus => "true" #This is needed, otherwise puppet will look at the process table to check if the process name is running. Iptables does not have a process as sits in the kernel
+        hasstatus => "true" 
 }
 
 } 
