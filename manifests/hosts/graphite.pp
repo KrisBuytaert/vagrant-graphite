@@ -85,6 +85,8 @@ file {"/etc/httpd/conf.d/welcome.conf":
 
 
 
+include gdash 
+
 
 } 
 

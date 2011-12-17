@@ -7,3 +7,6 @@
 [submodule "modules/apache"]
 	path = modules/apache
 	url = git+ssh://git@git.dev.inuits.be:2222/puppet-modules/apache.git
+[submodule "other/gdash"]
+	path = other/gdash
+	url = https://github.com/ripienaar/gdash
