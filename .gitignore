@@ -8,4 +8,4 @@ DEADJOE
 ## Vagrant files
 .vagrant
 
-/.svn/*
+*/.svn/*
