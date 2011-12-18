@@ -1,0 +1,11 @@
+# editor temp files
+*~
+.*.sw?
+.sw?
+\#*\#
+DEADJOE
+
+## Vagrant files
+.vagrant
+
+/.svn/*
