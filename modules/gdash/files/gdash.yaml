@@ -1,0 +1,14 @@
+:graphite: http://localhost/
+#:templatedir: /path/to/my/graph/templates
+:templatedir: /vagrant/other/gdash/graph_templates
+
+#:username: admin
+#:password: secret
+:options:
+  :title: My Dashboard
+  :prefix: ""
+  :refresh_rate: 60
+  :graph_columns: 2
+  :graph_width: 500
+  :graph_height: 250
+  :whisper_dir: "/var/lib/carbon/whisper"
