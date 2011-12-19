@@ -29,10 +29,13 @@ class default-repo {
 					'6.0' => 'inuits CentOS 6.x repo',
 					'*' => 'inuits CentOS 5.x repo',
 				},
-				gpgcheck => 0,
-				enabled => 1;
+				gpgcheck => 0, enabled => 1;
 
 
+
+		'inuits-gems':
+			baseurl => 'http://repo.inuits.be/gems/',
+			gpgcheck => 0, enabled => 1;
 	}
 }
 
