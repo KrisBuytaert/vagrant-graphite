@@ -84,6 +84,11 @@ file {"/etc/httpd/conf.d/welcome.conf":
 }
 
 
+# Satisfy  jps dependency 
+package {"java-1.6.0-openjdk-devel": ensure => present; }
+
+include jmxtrans
+include jmxtrans::example 
 
 
 } 
