@@ -91,7 +91,5 @@ include jmxtrans
 include jmxtrans::example 
 
 
-
-
 } 
 
