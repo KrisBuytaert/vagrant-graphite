@@ -10,3 +10,6 @@
 [submodule "modules/jmxtrans"]
 	path = modules/jmxtrans
 	url = git@github.com:KrisBuytaert/puppet-jmxtrans.git
+[submodule "modules/collectd"]
+	path = modules/collectd
+	url = git@github.com:KrisBuytaert/puppet-collectd.git

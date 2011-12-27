@@ -91,5 +91,14 @@ include jmxtrans
 include jmxtrans::example 
 
 
+
+include collectd
+
+class {'collectd::graphitewriter':
+  graphitehost  => '127.0.0.1',
+  graphiteport  => '2003',
+                  }
+
+
 } 
 
