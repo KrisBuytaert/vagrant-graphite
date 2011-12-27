@@ -66,9 +66,11 @@ node 'default' {
     prefix => 'swa'
   }
 
-  file {"/etc/httpd/conf.d/welcome.conf":
-    ensure => absent;
-  }
+
+file {"/etc/httpd/conf.d/welcome.conf":
+        ensure => absent;
+}
+
 
 # Satisfy  jps dependency 
   package {"java-1.6.0-openjdk-devel": ensure => present; }
