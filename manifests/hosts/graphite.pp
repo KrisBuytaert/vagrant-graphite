@@ -73,9 +73,9 @@ service { 'iptables':
 include logster
 
 logster::graphite {"swa":
-		host => '127.0.0.1',
-		file => '/var/log/graphite-web/access.log',
-		prefix => 'swa'
+  host => '127.0.0.1',
+  file => '/var/log/graphite-web/access.log',
+  prefix => 'swa'
 
 	}
 
@@ -89,6 +89,8 @@ package {"java-1.6.0-openjdk-devel": ensure => present; }
 
 include jmxtrans
 include jmxtrans::example 
+
+
 
 
 } 
