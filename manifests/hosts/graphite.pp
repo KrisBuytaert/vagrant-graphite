@@ -87,5 +87,14 @@ file {"/etc/httpd/conf.d/welcome.conf":
     graphitehost => "127.0.0.1",
     graphiteport => "2003",
   }
+
+include collectd
+
+class {'collectd::graphitewriter':
+  graphitehost  => '127.0.0.1',
+  graphiteport  => '2003',
+                  }
+
+
 } 
 
