@@ -9,4 +9,4 @@
 	url = git+ssh://git@git.dev.inuits.be:2222/puppet-modules/apache.git
 [submodule "modules/jmxtrans"]
 	path = modules/jmxtrans
-	url = git://github.com/KrisBuytaert/puppet-jmxtrans.git
+	url = git@github.com:KrisBuytaert/puppet-jmxtrans.git
