@@ -1,6 +1,6 @@
 class default-repo {
 
-  yumrepo {
+  yepo {
 
     'epel':
       baseurl => $operatingsystemrelease ? {
@@ -78,15 +78,64 @@ file {"/etc/httpd/conf.d/welcome.conf":
   include jmxtrans
   include jmxtrans::example 
 
-
   jmxtrans::graphite {"duplicate":
     jmxhost      => "127.0.0.1",
     jmxport      => "2101",
-    objtype      => "java.lang:thype=Memory",
-    attributes   => '"HeapMemoryUsage", "NonHeapMemoryUsage"', 
+    objtype      => "java.lang:type=Memory",
+    attributes   => '"HeapMemoryUsage", "NonHeapMemoryUsage"',
     graphitehost => "127.0.0.1",
     graphiteport => "2003",
   }
+
+
+  jmxtrans::graphite {"dev.example.com":
+    jmxhost      => "172.16.0.1",
+    jmxport      => "5446",
+    objtype      => "java.lang:type=Memory",
+    attributes   => '"HeapMemoryUsage", "NonHeapMemoryUsage"',
+    graphitehost => "127.0.0.1",
+    graphiteport => "2003",
+  }
+  jmxtrans::graphite {"catalinathread.dev.example.com":
+    jmxhost      => "172.16.0.1",
+    jmxport      => "5446",
+    objtype      => "Catalina:type=ThreadPool,name=*",
+    attributes   => '"currentThreadCount", "currentThreadsBusy", ""',
+    resultAlias  => "connectors",
+    typenames    => "name",
+    graphitehost => "127.0.0.1",
+    graphiteport => "2003",
+  }
+
+  jmxtrans::graphite {"queue.hornetq.dev.example.com":
+    jmxhost      => "172.16.0.1",
+    jmxport      => "5446",
+    objtype      => 'org.hornetq:type=Queue,*',
+    attributes   => '"MessageCount","MessagesAdded","ConsrCount"',
+    resultAlias  => "hornetq",
+    typenames    => "name",
+    graphitehost => "127.0.0.1",
+    graphiteport => "2003",
+  }
+
+  jmxtrans::graphite {"hornetq.dev.example.com":
+    jmxhost      => "172.16.0.1",
+    jmxport      => "5446",
+    objtype      => "java.lang:thype=Memory",
+    attributes   => '"HeapMemoryUsage", "NonHeapMemoryUsage"',
+    graphitehost => "127.0.0.1",
+    graphiteport => "2003",
+  }
+
+  jmxtrans::graphite {"thread.dev.example.com":
+    jmxhost      => "172.16.0.1",
+    jmxport      => "5446",
+    objtype      => "java.lang:type=Threading",
+    attributes   => '"ThreadCount", "PeakThreadCount","DaemonThreadCount","TotalStartedThreadCount"',
+    graphitehost => "127.0.0.1",
+    graphiteport => "2003",
+  }
+
 
 include collectd
 
@@ -96,5 +145,5 @@ class {'collectd::graphitewriter':
                   }
 
 
-} 
+}
 
