@@ -1,6 +1,6 @@
 class default-repo {
 
-  repo {
+  yumrepo {
 
     'epel':
       baseurl => $operatingsystemrelease ? {
