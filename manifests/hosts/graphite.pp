@@ -1,6 +1,6 @@
 class default-repo {
 
-  yepo {
+  repo {
 
     'epel':
       baseurl => $operatingsystemrelease ? {
