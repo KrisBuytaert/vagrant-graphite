@@ -19,7 +19,7 @@ class gdash {
 
  package {"rubygem-bundler": ensure => present }
  package {"rubygem-tilt":    ensure => "1.3.3-1" }
- package {"rubygem-rack":    ensure => "1.3.4-1" }
+ package {"rubygem-rack":    ensure => "1.3.5-1" }
  package {"rubygem-rack-protection": ensure => "1.1.4-1" }
 
 
