@@ -6,37 +6,37 @@ class default-repo {
 	yumrepo {
 
 
-		'epel':
-			baseurl => $operatingsystemrelease ? {
-				'6.0' => "http://mirror.eurid.eu/epel/6/$hardwaremodel/",
-					'*' => "http://mirror.eurid.eu/epel/5/$hardwaremodel/",
-			},
-				descr => $operatingsystemrelease ? {
-					'6.0' => 'Extra Packages for Enterprise Linux 6.x
-						',
-					'*' => 'Extra Packages for Enterprise Linux 5.x',
-				},
-				gpgcheck => 0,
-				enabled => 1;
+    'epel':
+      baseurl => $operatingsystemrelease ? {
+        '6.0' => "http://mirror.eurid.eu/epel/6/$hardwaremodel/",
+        '*' => "http://mirror.eurid.eu/epel/5/$hardwaremodel/",
+      },
+      descr => $operatingsystemrelease ? {
+        '6.0' => 'Extra Packages for Enterprise Linux 6.x
+        ',
+        '*' => 'Extra Packages for Enterprise Linux 5.x',
+      },
+      gpgcheck => 0,
+      enabled => 1;
 
 
-		'inuits':
-			baseurl => $operatingsystemrelease ? {
-				'6.0' => 'http://repo.inuits.be/centos/6/os',
-					'*' => 'http://repo.inuits.be/centos/5/os',
-			},
-				descr => $operatingsystemrelease ? {
-					'6.0' => 'inuits CentOS 6.x repo',
-					'*' => 'inuits CentOS 5.x repo',
-				},
-				gpgcheck => 0, enabled => 1;
+    'inuits':
+      baseurl => $operatingsystemrelease ? {
+        '6.0' => 'http://repo.inuits.be/centos/6/os',
+        '*' => 'http://repo.inuits.be/centos/5/os',
+      },
+      descr => $operatingsystemrelease ? {
+        '6.0' => 'inuits CentOS 6.x repo',
+        '*' => 'inuits CentOS 5.x repo',
+      },
+      gpgcheck => 0, enabled => 1;
 
 
 
-		'inuits-gems':
-			baseurl => 'http://repo.inuits.be/gems/',
-			gpgcheck => 0, enabled => 1;
-	}
+    'inuits-gems':
+      baseurl => 'http://repo.inuits.be/gems/',
+      gpgcheck => 0, enabled => 1;
+  }
 }
 
 
@@ -44,8 +44,8 @@ class default-repo {
 node 'default' { 
 
 package {
-	"django-tagging": 
-	ensure => present;
+  "django-tagging": 
+  ensure => present;
 }
 
 
@@ -76,11 +76,11 @@ service { 'iptables':
 include logster
 
 logster::graphite {"swa":
-		host => '127.0.0.1',
-		file => '/var/log/graphite-web/access.log',
-		prefix => 'swa'
+  host => '127.0.0.1',
+  file => '/var/log/graphite-web/access.log',
+  prefix => 'swa'
 
-	}
+}
 
 file {"/etc/httpd/conf.d/welcome.conf":
         ensure => absent;
