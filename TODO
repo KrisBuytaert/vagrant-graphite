@@ -1,0 +1,13 @@
+
+Add pencil support   https://github.com/fetep/pencil
+Add graphiti support https://github.com/paperlesspost/graphiti 
+
+
+Quick metric additions based on nc
+
+(joemiller on irc) echo "some.random.metric 1234 `date +%s`" | nc graphite 2003 
+
+Correlating puppetruns 
+http://joemiller.me/2011/11/05/correlating-puppet-changes-to-events-in-your-infrastructure/
+
+
