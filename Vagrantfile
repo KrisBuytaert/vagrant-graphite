@@ -17,7 +17,7 @@ Vagrant::Config.run do |config|
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
-  # config.vm.network "33.33.33.10"
+  config.vm.network "10.42.42.13"
 
   config.vm.forward_port "http", 80, 50050
   config.vm.forward_port "http2", 8080, 50051
