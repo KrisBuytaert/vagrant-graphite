@@ -13,3 +13,6 @@
 [submodule "modules/collectd"]
 	path = modules/collectd
 	url = git@github.com:KrisBuytaert/puppet-collectd.git
+[submodule "modules/statsd"]
+	path = modules/statsd
+	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-statsd.git

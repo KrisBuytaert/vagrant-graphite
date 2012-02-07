@@ -144,6 +144,7 @@ class {'collectd::graphitewriter':
   graphiteport  => '2003',
                   }
 
+ include statsd
 
 }
 

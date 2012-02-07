@@ -1,5 +1,3 @@
-
-
 Added a cron job that outputs http logs changes (based on logster) to graphite
 
 
@@ -15,4 +13,5 @@ Which I have build and placed on repo.inuits.eu
 
 
 
-Logster branch adds logster + an example log to this setup
+We all love ngrep : 
+ngrep -d eth1 . dst port 2003
