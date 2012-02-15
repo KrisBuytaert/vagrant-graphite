@@ -16,3 +16,6 @@
 [submodule "modules/statsd"]
 	path = modules/statsd
 	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-statsd.git
+[submodule "modules/tattle"]
+	path = modules/tattle
+	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-tattle.git

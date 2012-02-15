@@ -60,11 +60,11 @@ node 'default' {
 
   include logster
 
-  logster::graphite {"swa":
-    host => '127.0.0.1',
-    file => '/var/log/graphite-web/access.log',
-    prefix => 'swa'
-  }
+  #  logster::graphite {"swa":
+  #  host => '127.0.0.1',
+  #  file => '/var/log/graphite-web/access.log',
+  #  prefix => 'swa'
+  #}
 
 
 file {"/etc/httpd/conf.d/welcome.conf":
@@ -145,6 +145,11 @@ class {'collectd::graphitewriter':
                   }
 
  include statsd
+ class {'tattle':
+   dbhost        => "10.42.42.41",
+   dbpass        => "elttat",
+   graphiteurl   => "http://graphite/",
+ }
 
 }
 
