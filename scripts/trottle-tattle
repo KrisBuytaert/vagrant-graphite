@@ -1,0 +1,2 @@
+#!/bin/bash
+for i in `seq 50 200` ; do  echo "tattle.trottle $i `date +%s`" | nc graphite 2003 ; sleep 1; done 

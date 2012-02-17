@@ -140,8 +140,8 @@ file {"/etc/httpd/conf.d/welcome.conf":
 include collectd
 
 class {'collectd::graphitewriter':
-  graphitehost  => '127.0.0.1',
-  graphiteport  => '2003',
+  graphitehost   => '127.0.0.1',
+  graphiteport   => '2003',
                   }
 
  include statsd
@@ -150,6 +150,26 @@ class {'collectd::graphitewriter':
    dbpass        => "elttat",
    graphiteurl   => "http://graphite/",
  }
+
+
+ # class { 'percona':
+ #  server          => 'true',
+ #  percona_version => '5.1';
+ #}
+
+
+ #percona::database{"tattle":
+ #  ensure => present
+ #}
+ #percona::rights{"Set rights for tattle":
+ #  user          => "tattle",
+ #  password      => "elttat",
+ #  database      => ["tattle"],
+ #  priv          => ["select_priv", "insert_priv", "update_priv", "delete_priv"],
+ #  host          => "localhost"
+ #}
+
+
 
 }
 
