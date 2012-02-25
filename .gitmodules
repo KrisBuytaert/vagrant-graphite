@@ -4,9 +4,6 @@
 [submodule "modules/graphite"]
 	path = modules/graphite
 	url = git@github.com:KrisBuytaert/puppet-graphite.git
-[submodule "modules/apache"]
-	path = modules/apache
-	url = git+ssh://git@git.dev.inuits.be:2222/puppet-modules/apache.git
 [submodule "modules/jmxtrans"]
 	path = modules/jmxtrans
 	url = git@github.com:KrisBuytaert/puppet-jmxtrans.git
@@ -19,3 +16,6 @@
 [submodule "modules/tattle"]
 	path = modules/tattle
 	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-tattle.git
+[submodule "modules/apache"]
+	path = modules/apache
+	url = https://github.com/simonsd/puppet-apache.git
