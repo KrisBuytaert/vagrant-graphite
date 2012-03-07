@@ -9,9 +9,9 @@ And use packages rather than untarring the files.
 Packages can be build using SPECS from 
 https://github.com/dcarley/graphite-rpms/
 
-Which I have build and placed on repo.inuits.eu 
+Which I have build and placed on repo.inuits.eu
 
 
 
-We all love ngrep : 
+We all love ngrep :
 ngrep -d eth1 . dst port 2003
