@@ -17,11 +17,11 @@ Vagrant::Config.run do |config|
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
-  config.vm.network "10.42.42.13"
+  config.vm.network :hostonly, "10.42.42.13"
 
-  config.vm.forward_port "http", 80, 50050
-  config.vm.forward_port "http2", 8080, 50051
-  config.vm.forward_port "carbon", 2003, 2021
+  config.vm.forward_port  80, 50050
+  config.vm.forward_port  8080, 50051
+  config.vm.forward_port  2003, 2021
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
