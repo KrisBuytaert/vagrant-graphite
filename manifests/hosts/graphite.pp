@@ -138,11 +138,11 @@ file {"/etc/httpd/conf.d/welcome.conf":
 
 
 include collectd
-include collectd::snmp 
-class {'collectd::graphitewriter':
-  graphitehost   => '127.0.0.1',
-  graphiteport   => '2003',
-                  }
+#include collectd::plugin::snmp
+#class {'collectd::plugin::graphitewriter':
+#  graphitehost   => '127.0.0.1',
+#  graphiteport   => '2003',
+#                  }
 
  include statsd
  class {'tattle':
