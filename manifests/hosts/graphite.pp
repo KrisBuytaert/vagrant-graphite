@@ -46,9 +46,12 @@ node 'default' {
 
 
   include default-repo
+  class {'graphite::params':
+    time_zone => 'UTC'
+  }
   include graphite
-  include graphite::demo
-  Class ["default-repo"] -> Class ["graphite"] -> Class["graphite::demo"]
+  #include graphite::demo
+  Class ["default-repo"] -> Class ["graphite"]
 
 
   service { 'iptables':
