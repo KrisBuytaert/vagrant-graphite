@@ -108,7 +108,7 @@ file {"/etc/httpd/conf.d/welcome.conf":
   }
 
   jmxtrans::graphite {"queue.hornetq.dev.example.com":
-    jmxhost      => "172.16.0.1",
+    jmxhost      => "hornetq02.prod.dc01.uni",
     jmxport      => "5446",
     objtype      => 'org.hornetq:type=Queue,*',
     attributes   => '"MessageCount","MessagesAdded","ConsrCount"',
@@ -135,6 +135,12 @@ file {"/etc/httpd/conf.d/welcome.conf":
     graphitehost => "127.0.0.1",
     graphiteport => "2003",
   }
+
+  graphite::carbon::storage {"default_1min_for_1day":
+      pattern    => ".*",
+      retentions => "60s:1d",
+  }
+
 
 
 include collectd

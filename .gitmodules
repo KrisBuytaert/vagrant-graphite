@@ -19,3 +19,6 @@
 [submodule "modules/apache"]
 	path = modules/apache
 	url = https://github.com/simonsd/puppet-apache.git
+[submodule "modules/concat"]
+	path = modules/concat
+	url = git://github.com/ripienaar/puppet-concat.git
