@@ -108,7 +108,7 @@ file {"/etc/httpd/conf.d/welcome.conf":
   }
 
   jmxtrans::graphite {"queue.hornetq.dev.example.com":
-    jmxhost      => "hornetq02.prod.dc01.uni",
+    jmxhost      => "192.168.92.100",
     jmxport      => "5446",
     objtype      => 'org.hornetq:type=Queue,*',
     attributes   => '"MessageCount","MessagesAdded","ConsrCount"',
@@ -173,16 +173,6 @@ include collectd
  #  database      => ["tattle"],
  #  priv          => ["select_priv", "insert_priv", "update_priv", "delete_priv"],
  #  host          => "localhost"
- #}
-
- #include up-graph
- #class {'up-graph::document-throughput':
- #  graphitehost => '127.0.0.1'
- #}
-
- # up-graph::incomingdirsize {'blah':
- #  graphitehost       => '127.0.0.1',
- #  settingsxmltoparse => '/usr/local/um/client-hdp/conf/settings.xml'
  #}
 
 
