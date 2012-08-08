@@ -9,7 +9,9 @@ And use packages rather than untarring the files.
 Packages can be build using SPECS from 
 https://github.com/dcarley/graphite-rpms/
 
-Which I have build and placed on repo.inuits.eu
+Which I have build and placed on 
+
+http://pulp.inuits.eu/
 
 
 
