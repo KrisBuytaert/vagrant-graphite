@@ -6,7 +6,7 @@ class my-graphite {
       ensure => present;
   }
 
-  $soft = [ "httpd", "mod_wsgi", "python-fedora-django", "mod_python", "python-zope-interface", "python-twisted-core", "python-memcached", "python-ldap" ]
+  $soft = [  "mod_wsgi", "python-fedora-django", "mod_python", "python-zope-interface", "python-twisted-core", "python-memcached", "python-ldap" ]
     package { $soft:
     ensure => present;
   }
