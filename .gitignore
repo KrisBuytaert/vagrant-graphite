@@ -1,3 +1,5 @@
 .vagrant
 *.un*
 other/
+*.rpm
+*.gem
