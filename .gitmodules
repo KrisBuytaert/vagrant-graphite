@@ -16,9 +16,18 @@
 [submodule "modules/tattle"]
 	path = modules/tattle
 	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-tattle.git
-[submodule "modules/apache"]
-	path = modules/apache
-	url = https://github.com/simonsd/puppet-apache.git
 [submodule "modules/concat"]
 	path = modules/concat
 	url = git://github.com/ripienaar/puppet-concat.git
+[submodule "modules/passenger"]
+	path = modules/passenger
+	url = git://github.com/simonsd/puppet-passenger.git
+[submodule "modules/ruby"]
+	path = modules/ruby
+	url = git://github.com/simonsd/puppet-ruby.git
+[submodule "modules/tmpwatch"]
+	path = modules/tmpwatch
+	url = http://github.com/KrisBuytaert/puppet-tmpwatch/
+[submodule "modules/gdash"]
+	path = modules/gdash
+	url = http://github.com/KrisBuytaert/puppet-gdash/
