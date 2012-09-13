@@ -21,7 +21,7 @@
 	url = git://github.com/ripienaar/puppet-concat.git
 [submodule "modules/passenger"]
 	path = modules/passenger
-	url = git://github.com/simonsd/puppet-passenger.git
+	url = https://github.com/UnifiedPost/puppet-passenger.git
 [submodule "modules/ruby"]
 	path = modules/ruby
 	url = git://github.com/simonsd/puppet-ruby.git
