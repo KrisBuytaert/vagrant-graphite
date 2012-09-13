@@ -31,3 +31,6 @@
 [submodule "modules/gdash"]
 	path = modules/gdash
 	url = http://github.com/KrisBuytaert/puppet-gdash/
+[submodule "modules/apache"]
+	path = modules/apache
+	url = git://github.com/Inuits/puppet-apache.git

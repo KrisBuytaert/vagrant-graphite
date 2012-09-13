@@ -6,9 +6,16 @@ node 'default' {
   include my-repos
   include my-graphite
   include apache
-  apache::listen{'80':}
-  apache::namevhost{'80':}
+  #  apache::listen{'80':}
+  #  apache::namevhost{'80':}
   include passenger
+
+  apache::vhost{'gdash':
+    docroot      => '/usr/local/gdash/public/',
+    vhost_config =>'
+    RackAutodetect On',
+  }
+
   class {'gdash':
     graphitehost => '10.42.42.13'
   }
