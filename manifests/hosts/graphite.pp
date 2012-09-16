@@ -17,7 +17,7 @@ node 'default' {
   }
 
   class {'gdash':
-    graphitehost => 'graphite'
+    graphitehost => 'https://graphite.dev.inuits.eu/'
   }
 
   tmpwatch::cleanup {'jmxtrans':
