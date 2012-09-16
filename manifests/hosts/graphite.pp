@@ -17,7 +17,7 @@ node 'default' {
   }
 
   class {'gdash':
-    graphitehost => '10.42.42.13'
+    graphitehost => 'graphite'
   }
 
   tmpwatch::cleanup {'jmxtrans':

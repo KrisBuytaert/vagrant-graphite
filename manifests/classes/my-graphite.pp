@@ -106,7 +106,7 @@ file {"/etc/httpd/conf.d/welcome.conf":
 
   graphite::carbon::storage {"default_1min_for_1day":
       pattern    => ".*",
-      retentions => "60s:1d",
+      retentions => "60s:1d,300s:30d,600s:356d"
   }
 
 
