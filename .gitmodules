@@ -30,7 +30,7 @@
 	url = http://github.com/KrisBuytaert/puppet-tmpwatch/
 [submodule "modules/gdash"]
 	path = modules/gdash
-	url = http://github.com/KrisBuytaert/puppet-gdash/
+	url = git:@github.com/KrisBuytaert/puppet-gdash.git
 [submodule "modules/apache"]
 	path = modules/apache
 	url = git://github.com/Inuits/puppet-apache.git
