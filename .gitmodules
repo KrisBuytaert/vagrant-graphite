@@ -34,3 +34,6 @@
 [submodule "modules/apache"]
 	path = modules/apache
 	url = git://github.com/Inuits/puppet-apache.git
+[submodule "modules/rsyslog"]
+	path = modules/rsyslog
+	url = git@github.com:KrisBuytaert/puppet-rsyslog.git
