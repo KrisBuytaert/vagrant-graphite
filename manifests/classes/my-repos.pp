@@ -39,7 +39,7 @@ class my-repos{
     baseurl  => 'http://pulp.inuits.eu/pulp/repos/epel/6/x86_64/',
     descr    => 'Epel Repo at Inuits',
     gpgcheck => '0',
-    enabled  => '0',
+    enabled  => '1',
   }
   yumrepo {'nodjes-tchol':
     baseurl    => 'https://pulp.inuits.eu/pulp/repos/stable/el6/x86_64/',
