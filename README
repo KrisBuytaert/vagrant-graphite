@@ -1,15 +1,25 @@
-Added a cron job that outputs http logs changes (based on logster) to graphite
+HOWTO USE
+
+git submodule init 
+git submodule update 
+vagrant up 
 
 
 
-Works on CentOS now 
-Refactored  to use modules
-And use packages rather than untarring the files.
+NOTE:
 
-Packages can be build using SPECS from 
+We're in rubygem hell, this box currently works for 90% ,
+It barfs on rubygems (sinatra) that it installs from EPEL where it should install them from the rubygems repo 
+at inuits.    Removing the gem + some deps  (yum remove rubygem-rack) , then disabling EPEL and reinstalling rubygem-sinatra
+again currently solves this but I need to find a better approach for this.
+
+
+Tested on CentOS now
+
+Packages can be build using SPECS from
 https://github.com/dcarley/graphite-rpms/
 
-Which I have build and placed on 
+Which I have build and placed on
 
 http://pulp.inuits.eu/
 
@@ -17,3 +27,8 @@ http://pulp.inuits.eu/
 
 We all love ngrep :
 ngrep -d eth1 . dst port 2003
+
+
+
+
+
