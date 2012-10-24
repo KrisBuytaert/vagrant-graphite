@@ -15,7 +15,7 @@ class my-graphite {
   class {'graphite::params':
      time_zone => 'UTC'
   }
-  include graphite
+  class {'graphite': }
   #include graphite::demo
 
 
