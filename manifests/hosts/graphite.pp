@@ -10,11 +10,6 @@ node 'graphite' {
   #  apache::namevhost{'80':}
   #  include passenger
 
-  apache::vhost{'gdash':
-    docroot      => '/usr/local/gdash/public/',
-    vhost_config =>'
-    RackAutodetect On',
-  }
 
 
   tmpwatch::cleanup {'jmxtrans':
@@ -38,6 +33,8 @@ node 'graphite' {
     filename => '/var/log/graphite-web/error.log',
     inputfiletag => 'apache-error',
   }
+
+  include my-gdash
 
 }
 

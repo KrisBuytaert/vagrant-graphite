@@ -12,10 +12,6 @@ class my-gdash{
     graphitehost => 'https://graphite.dev.inuits.eu/'
   }
 
-  class {'rsyslog':
-    servers => '10.42.42.51';
-  }
-  class {'rsyslog::filelog':}
   rsyslog::shiplog{'gdash-access':
     filename     => '/var/log/httpd/vhosts/gdash/access.log',
     inputfiletag => 'apache-access',
