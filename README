@@ -8,17 +8,6 @@ vagrant up
 
 NOTE:
 
-I've splitted out the gdash box where we have the rubygem hell for now
-
-We're in rubygem hell, this box currently works for 90% ,
-It barfs on rubygems (sinatra) that it installs from EPEL where it should install them from the rubygems repo 
-at inuits.    Removing the gem + some deps  (yum remove rubygem-rack) , then disabling EPEL and reinstalling rubygem-sinatra
-again currently solves this but I need to find a better approach for this.
-
-
-Need to find a way to package gem bundles as RPM.  Rather than individual gems hence creating gem dep hell.
-
-
 Tested on CentOS now
 
 Packages can be build using SPECS from
