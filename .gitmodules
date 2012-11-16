@@ -1,39 +1,39 @@
 [submodule "modules/logster"]
 	path = modules/logster
-	url = git@github.com:KrisBuytaert/puppet-logster.git
+	url = https://github.com/KrisBuytaert/puppet-logster.git
 [submodule "modules/graphite"]
 	path = modules/graphite
-	url = git@github.com:KrisBuytaert/puppet-graphite.git
+	url = https://github.com/KrisBuytaert/puppet-graphite.git
 [submodule "modules/jmxtrans"]
 	path = modules/jmxtrans
-	url = git@github.com:KrisBuytaert/puppet-jmxtrans.git
+	url = https://github.com/KrisBuytaert/puppet-jmxtrans.git
 [submodule "modules/collectd"]
 	path = modules/collectd
-	url = git@github.com:KrisBuytaert/puppet-collectd.git
+	url = https://github.com/KrisBuytaert/puppet-collectd.git
 [submodule "modules/statsd"]
 	path = modules/statsd
-	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-statsd.git
+	url = https://github.com/KrisBuytaert/puppet-statsd.git
 [submodule "modules/tattle"]
 	path = modules/tattle
-	url = https://KrisBuytaert@github.com/KrisBuytaert/puppet-tattle.git
+	url = https://github.com/KrisBuytaert/puppet-tattle.git
 [submodule "modules/concat"]
 	path = modules/concat
-	url = git://github.com/ripienaar/puppet-concat.git
+	url = https://github.com/ripienaar/puppet-concat.git
 [submodule "modules/passenger"]
 	path = modules/passenger
 	url = https://github.com/UnifiedPost/puppet-passenger.git
 [submodule "modules/ruby"]
 	path = modules/ruby
-	url = git://github.com/simonsd/puppet-ruby.git
+	url = https://github.com/simonsd/puppet-ruby.git
 [submodule "modules/tmpwatch"]
 	path = modules/tmpwatch
-	url = git@github.com:KrisBuytaert/puppet-tmpwatch.git
+	url = https://github.com/KrisBuytaert/puppet-tmpwatch.git
 [submodule "modules/gdash"]
 	path = modules/gdash
-	url = git://github.com/KrisBuytaert/puppet-gdash.git
+	url = https://github.com/KrisBuytaert/puppet-gdash.git
 [submodule "modules/apache"]
 	path = modules/apache
-	url = git://github.com/Inuits/puppet-apache.git
+	url = https://github.com/Inuits/puppet-apache.git
 [submodule "modules/rsyslog"]
 	path = modules/rsyslog
-	url = git@github.com:KrisBuytaert/puppet-rsyslog.git
+	url = https://github.com/KrisBuytaert/puppet-rsyslog.git
