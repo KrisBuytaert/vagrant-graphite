@@ -8,7 +8,7 @@ node 'graphite' {
   include apache
   #  apache::listen{'80':}
   #  apache::namevhost{'80':}
-  include passenger
+  #  include passenger
 
   apache::vhost{'gdash':
     docroot      => '/usr/local/gdash/public/',
@@ -16,9 +16,6 @@ node 'graphite' {
     RackAutodetect On',
   }
 
-  class {'gdash':
-    graphitehost => 'https://graphite.dev.inuits.eu/'
-  }
 
   tmpwatch::cleanup {'jmxtrans':
     path => '/var/lib/jmxtrans',
@@ -33,12 +30,12 @@ node 'graphite' {
     servers => '10.42.42.51';
   }
   class {'rsyslog::filelog':}
-  rsyslog::shiplog{'gdash-access':
-    filename => '/var/log/httpd/vhosts/gdash/access.log',
+  rsyslog::shiplog{'graphite-access':
+    filename => '/var/log/graphite-web/access.log',
     inputfiletag => 'apache-access',
   }
-  rsyslog::shiplog{'gdash-error':
-    filename => '/var/log/httpd/vhosts/gdash/error.log',
+  rsyslog::shiplog{'graphite-error':
+    filename => '/var/log/graphite-web/error.log',
     inputfiletag => 'apache-error',
   }
 
