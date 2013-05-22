@@ -22,7 +22,7 @@ node 'graphite' {
   }
 
   class {'rsyslog':
-    servers => '10.42.42.51';
+    servers => '10.42.42.51:5544';
   }
   class {'rsyslog::filelog':}
   rsyslog::shiplog{'graphite-access':
