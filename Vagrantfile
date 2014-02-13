@@ -9,7 +9,7 @@ Vagrant::Config.run do |config|
     graphite_config.ssh.max_tries = 100
     graphite_config.vm.host_name = "graphite"
     graphite_config.vm.provision :puppet do |graphite_puppet|
-      graphite_puppet.pp_path = "/tmp/vagrant-puppet"
+#      graphite_puppet.pp_path = "/tmp/vagrant-puppet"
       graphite_puppet.manifests_path = "manifests"
       graphite_puppet.module_path = "modules"
       graphite_puppet.manifest_file = "site.pp"
@@ -37,7 +37,7 @@ Vagrant::Config.run do |config|
     dashing_config.ssh.max_tries = 100
     dashing_config.vm.host_name = "dashing"
     dashing_config.vm.provision :puppet do |dashing_puppet|
-      dashing_puppet.pp_path = "/tmp/vagrant-puppet"
+#      dashing_puppet.pp_path = "/tmp/vagrant-puppet"
       dashing_puppet.manifests_path = "manifests"
       dashing_puppet.module_path = "modules"
       dashing_puppet.manifest_file = "site.pp"
@@ -50,7 +50,7 @@ Vagrant::Config.run do |config|
     teamdash_config.ssh.max_tries = 100
     teamdash_config.vm.host_name = "teamdash"
     teamdash_config.vm.provision :puppet do |teamdash_puppet|
-      teamdash_puppet.pp_path = "/tmp/vagrant-puppet"
+#      teamdash_puppet.pp_path = "/tmp/vagrant-puppet"
       teamdash_puppet.manifests_path = "manifests"
       teamdash_puppet.module_path = "modules"
       teamdash_puppet.manifest_file = "site.pp"
